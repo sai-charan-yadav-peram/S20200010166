@@ -1,3 +1,5 @@
+//need to add necessary changes to showcase skill
+
 const express = require("express");
 const axios = require("axios");
 
@@ -94,6 +96,9 @@ app.get("/train/trains", async (req, res) => {
     res.status(error.response?.status || 500).json({ error: error.message });
   }
 });
+
+app.use("*",async(req,res)=>{
+  res.json("no route exists")});
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
