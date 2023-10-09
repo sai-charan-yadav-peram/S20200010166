@@ -13,6 +13,9 @@ app.use(express.json());
 app.post("/login", async (req, res) => {
   res.json("response from login");
 });
+app.post("/signup", async (req, res) => {
+  res.json("response from signup");
+});
 
 app.post("/register", async (req, res) => {
   try {
