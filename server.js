@@ -10,6 +10,10 @@ const port = 8000;
 app.use(cors());
 app.use(express.json());
 
+app.post("/login", async (req, res) => {
+  res.json("response from login");
+});
+
 app.post("/register", async (req, res) => {
   try {
     const url = "http://20.244.56.144/train/register";
